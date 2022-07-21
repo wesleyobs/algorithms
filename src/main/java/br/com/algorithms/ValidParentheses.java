@@ -3,6 +3,8 @@ package br.com.algorithms;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ValidParentheses {
     public static void main(String[] args) {
@@ -15,9 +17,9 @@ public class ValidParentheses {
 
 class Solution {
     public boolean isValid(String s) {
-//        final Pattern compile = Pattern.compile("(\\[})|(\\[\\))|(\\{\\))|(\\{\\])|(\\(\\])|(\\(})");
-//        final Matcher matcher = compile.matcher(s);
-//        if (matcher.find()) return false;
+        final Pattern compile = Pattern.compile("(\\[})|(\\[\\))|(\\{\\))|(\\{\\])|(\\(\\])|(\\(})");
+        final Matcher matcher = compile.matcher(s);
+        if (matcher.find()) return false;
         if (!(s.length() % 2 == 0))
             return false;
         final List<String> stringList = new LinkedList<>(Arrays.asList(s.split("")));
