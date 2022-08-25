@@ -15,9 +15,11 @@ public class ValidParentheses {
 
 class Solution {
     public boolean isValid(String s) {
+        String[] array = s.split("");
+        Arrays.sort(array);
         if (!(s.length() % 2 == 0))
             return false;
-        final List<String> stringList = new LinkedList<>(Arrays.asList(s.split("")));
+        final List<String> stringList = new LinkedList<>(Arrays.asList(array));
         this.validate(stringList);
         return stringList.isEmpty();
     }

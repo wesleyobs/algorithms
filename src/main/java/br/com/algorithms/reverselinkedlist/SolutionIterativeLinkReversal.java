@@ -2,6 +2,7 @@ package br.com.algorithms.reverselinkedlist;
 
 public class SolutionIterativeLinkReversal {
     public ListNode reverseBetween(ListNode head, int m, int n) {
+
         if (head == null)
             return null;
 
